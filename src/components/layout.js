@@ -9,17 +9,18 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 import { Container, Row, Col } from "react-bootstrap"
+import { FaHeart } from "react-icons/fa"
 
 import Header from "./header"
-import Navbar from "./navBar"
 
-const Layout = ({ children, pageInfo }) => (
+const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
         site {
           siteMetadata {
             title
+            author
           }
         }
       }
@@ -32,7 +33,7 @@ const Layout = ({ children, pageInfo }) => (
               <Header siteTitle={data.site.siteMetadata.title} />
             </Col>
           </Row>
-          <Navbar pageInfo={pageInfo} />
+
           <Row noGutters>
             <Col>
               <Container className="mt-5">
@@ -46,9 +47,8 @@ const Layout = ({ children, pageInfo }) => (
             <Col className="footer-col">
               <footer>
                 <span>
-                  © {new Date().getFullYear()}, Built with
-                  {` `}
-                  <a href="https://www.gatsbyjs.org">Gatsby</a>
+                  © {new Date().getFullYear()}, Built with <FaHeart /> by 
+                  <p>{data.site.siteMetadata.author}</p>
                 </span>
               </footer>
             </Col>

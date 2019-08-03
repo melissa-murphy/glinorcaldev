@@ -1,9 +1,9 @@
 module.exports = {
-  pathPrefix: "/gatsby-react-bootstrap-starter",
+  pathPrefix: "/",
   siteMetadata: {
-    title: `Gatsby React Bootstrap Starter`,
-    description: `A starter that includes react-bootstrap and react-icons, along with SASS compilation.`,
-    author: `Billy Jacoby`,
+    title: `GLI Norcal Landscape Construction`,
+    description: `Purveyors of Fine Crafted Landscapes in Marin and the SF Bay Area.`,
+    author: `thoughtfulMonkey`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -14,17 +14,24 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-react-bootstrap`,
-        short_name: `react-bootstrap`,
+        name: `gli-norcal-landscape-construction`,
+        short_name: `gli-norcal`,
         start_url: `/`,
         background_color: `#20232a`,
-        theme_color: `#20232a`,
+        theme_color: `#798d64`,
         display: `minimal-ui`,
       },
     },
