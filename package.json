@@ -25,6 +25,9 @@
     "react-icons": "^3.6.1"
   },
   "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-loader": "^2.2.1",
+    "gatsby-plugin-eslint": "^1.0.3",
     "gh-pages": "^2.0.1",
     "prettier": "^1.17.0"
   },
@@ -39,7 +42,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "clean:all": "rm -rf node_modules/ .cache"
   },
   "repository": {
     "type": "git",
