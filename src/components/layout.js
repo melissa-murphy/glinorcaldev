@@ -33,21 +33,16 @@ const Layout = ({ children }) => (
               <Header siteTitle={data.site.siteMetadata.title} />
             </Col>
           </Row>
-
-          <Row noGutters>
-            <Col>
-              <Container className="mt-5">
-                <main>{children}</main>
-              </Container>
-            </Col>
-          </Row>
+          <Container fluid className="m-0">
+            <main>{children}</main>
+          </Container>
         </Container>
         <Container fluid className="px-0">
           <Row noGutters>
             <Col className="footer-col">
               <footer>
                 <span>
-                  © {new Date().getFullYear()}, Built with <FaHeart /> by 
+                  © {new Date().getFullYear()}, Built with <FaHeart /> by
                   <p>{data.site.siteMetadata.author}</p>
                 </span>
               </footer>
