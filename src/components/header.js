@@ -6,10 +6,13 @@ import { Navbar, Nav } from "react-bootstrap"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `#798d64`,
-    }}
-  >
-    <Navbar bg="light" expand="lg">
+      background: `rgba(255,255,255,0.6)`,
+      position: `fixed`,
+      zIndex: `999`,
+      width: `100%`,
+      height: `4rem`
+    }}>
+    <Navbar bg="transparent" expand="lg">
       <Navbar.Brand href="#home">{siteTitle}</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">

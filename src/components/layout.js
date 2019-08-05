@@ -33,7 +33,7 @@ const Layout = ({ children }) => (
               <Header siteTitle={data.site.siteMetadata.title} />
             </Col>
           </Row>
-          <Container fluid className="m-0">
+          <Container fluid className="m-0 px-0">
             <main>{children}</main>
           </Container>
         </Container>
