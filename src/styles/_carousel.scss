@@ -1,0 +1,17 @@
+.image-gallery {
+    .image-gallery-image {
+        height: calc(100vh + 4rem);
+        width: 100%;
+        
+        @media (max-width: $mobile) {
+            height: 100vh;
+        }
+    }
+}
+
+.carousel-wrapper {
+    margin-top: -4rem;
+    @media (max-width: $mobile) {
+        margin-top: 0;
+    }
+}

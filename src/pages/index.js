@@ -10,9 +10,9 @@ import image1 from "../images/glinorcal-stone-firepit.jpg"
 import image2 from "../images/glinorcal-stone-path-masonry-glass-privacy-walls.jpg"
 import image3 from "../images/glinorcal-stone-walls-patio-carpentry.jpg"
 
-const carouselWrapperStyle = {
-  marginTop: `-4rem`,
-}
+// const carouselWrapperStyle = {
+//   marginTop: `-4rem`,
+// }
 class IndexPage extends Component {
   render() {
     const images = [
@@ -35,7 +35,7 @@ class IndexPage extends Component {
           title="Home"
           keywords={[`glinorcal`, `landscape`, `construction`]}
         />
-        <Container fluid className="mx-0 px-0" style={carouselWrapperStyle}>
+        <Container fluid className="carousel-wrapper mx-0 px-0">
           <ImageGallery
             showPlayButton={false}
             showFullscreenButton={false}

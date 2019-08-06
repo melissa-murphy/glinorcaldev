@@ -6,7 +6,7 @@ import { Navbar, Nav } from "react-bootstrap"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rgba(255,255,255,0.6)`,
+      background: `rgba(255,255,255,0.65)`,
       position: `fixed`,
       zIndex: `999`,
       width: `100%`,
