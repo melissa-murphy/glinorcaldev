@@ -12,6 +12,7 @@ import { Container, Row, Col } from "react-bootstrap"
 import { FaHeart } from "react-icons/fa"
 
 import Header from "./header"
+import FooterMain from "./FooterMain"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -38,6 +39,7 @@ const Layout = ({ children }) => (
           </Container>
         </Container>
         <Container fluid className="px-0">
+        <FooterMain />
           <Row noGutters>
             <Col className="footer-col">
               <footer>
