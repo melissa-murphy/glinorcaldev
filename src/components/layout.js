@@ -38,8 +38,10 @@ const Layout = ({ children }) => (
             <main>{children}</main>
           </Container>
         </Container>
+        <Container>
+          <FooterMain />
+        </Container>
         <Container fluid className="px-0">
-        <FooterMain />
           <Row noGutters>
             <Col className="footer-col">
               <footer>
