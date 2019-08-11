@@ -1,0 +1,24 @@
+@mixin link-design {
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    transition: all .5s;
+  
+    &:hover {
+      text-decoration: none;
+      border-bottom: 3px solid $primary;
+      transition: all 0.5s;
+    }
+  }
+  
+  @mixin link-design-active {
+    text-decoration: none;
+    border-bottom: 3px solid $primary;
+    transition: all .5s;
+  }
+  
+  @mixin portrait-img-lg-screen {
+    @include media-breakpoint-up(lg) {
+      background-size: contain;
+      background-repeat: no-repeat;
+  }
+  }

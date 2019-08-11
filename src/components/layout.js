@@ -38,8 +38,8 @@ const Layout = ({ children }) => (
             <main>{children}</main>
           </Container>
         </Container>
-        <Container>
-          <FooterMain />
+        <Container fluid className="footer-wrapper">
+          <FooterMain siteTitle={data.site.siteMetadata.title} />
         </Container>
         <Container fluid className="px-0">
           <Row noGutters>
@@ -47,7 +47,7 @@ const Layout = ({ children }) => (
               <footer>
                 <span>
                   © {new Date().getFullYear()}, Built with <FaHeart /> by
-                  <p>{data.site.siteMetadata.author}</p>
+                  {data.site.siteMetadata.author}
                 </span>
               </footer>
             </Col>
