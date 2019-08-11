@@ -46,8 +46,12 @@ const Layout = ({ children }) => (
             <Col className="footer-col">
               <footer>
                 <span>
-                  © {new Date().getFullYear()}, Built with <FaHeart /> by
+                <small>
+                  © {new Date().getFullYear()}, GLI Norcal Landscape
+                  Construction Inc., All Rights Reserved <br />
+                  Built with <FaHeart /> by
                   {data.site.siteMetadata.author}
+                  </small>
                 </span>
               </footer>
             </Col>

@@ -3,6 +3,10 @@ import React from "react"
 import instagramIcon from "../images/icons/instagram.png"
 import linkedInIcon from "../images/icons/linkedin.png"
 import twitterIcon from "../images/icons/twitter.png"
+import phone from "../images/icons/phone.png"
+import message from "../images/icons/message.png"
+import map from "../images/icons/map.png"
+import checkicon from "../images/icons/checkmark.png"
 
 import {
   Container,
@@ -12,14 +16,12 @@ import {
   Form,
   FormGroup,
   Button,
+  Image,
 } from "react-bootstrap"
 
 const FooterMain = ({ siteTitle }) => (
   <div>
-    <Container
-      style={{
-        marginBottom: `4rem`,
-      }}>
+    <Container style={{}}>
       <Row>
         <Col lg={6}>
           <p className="h1 mb-2 pt-5 pb-2 text-light">{siteTitle}</p>
@@ -83,51 +85,92 @@ const FooterMain = ({ siteTitle }) => (
             </FormGroup>
           </Form>
         </Col>
-        <Col xs={12} lg={3} className="jobs-link text-right">
+        <Col xs={12} lg={3} className="jobs-link text-center">
           <h6 className="default-pointer text-uppercase ">
             Career Opportunities
           </h6>
 
           <Nav pullRight>
-            <Nav.Link className="text-light ml-auto pr-0" href="/careers">
+            <Nav.Link className="text-light mx-auto" href="/careers">
               Browse the job openings.
             </Nav.Link>
           </Nav>
-          <Col className="pt-2 social-buttons text-right">
+          <Col className="pt-2 social-buttons">
             <p className="text-uppercase pb-0 mb-0">follow gli norcal</p>
-            <ul
-              className="d-flex flex-row justify-content-end mt-0
-          pt-0">
-              <li className="px-0 icon">
+            <Row>
+              <Col xs={{ span: 1, offset: 4 }}>
                 <a
                   className="link-no-style"
                   rel="nofollow"
                   href="https://instagram.com"
                   title="Instagram">
-                  <img src={instagramIcon} alt="Instagram" />{" "}
+                  <Image className="icon" src={instagramIcon} alt="Instagram" />{" "}
                 </a>
                 &nbsp;
-              </li>
-              <li className="px-0 icon">
+              </Col>
+              <Col xs={{ span: 1 }}>
                 <a
                   className="link-no-style"
                   rel="nofollow"
                   href="https://linkedin.com"
                   title="LinkedIn">
-                  <img src={linkedInIcon} alt="LinkedIn" />{" "}
+                  <Image className="icon" src={linkedInIcon} alt="LinkedIn" />{" "}
                 </a>
                 &nbsp;
-              </li>
-              <li className="px-0 icon">
+              </Col>
+              <Col xs={{ span: 1 }}>
                 <a
                   className="link-no-style"
                   rel="nofollow"
                   href="https://twitter.com"
                   title="Twitter">
-                  <img src={twitterIcon} alt="Twitter" />
+                  <Image className="icon" src={twitterIcon} alt="Twitter" />
                 </a>
-              </li>
-            </ul>
+              </Col>
+            </Row>
+          </Col>
+        </Col>
+      </Row>
+      <Row className="footer-info-links">
+        <Col xs={{ span: 6, order: 12 }} md={3}>
+          <Image src={map} alt="address" className="icon" />
+          <Col>
+            <a
+              className="link-no-style"
+              href="https://www.google.com/maps/place/GLI+Norcal+Landscape+Construction/@37.939707,-122.514235,15z/data=!4m5!3m4!1s0x0:0x8c67891c5a08c38c!8m2!3d37.939707!4d-122.514235"
+              target="_blank">
+              125 Rich Street <br />
+              Greenbrae, CA 94904
+            </a>
+          </Col>
+        </Col>
+        <Col xs={{ span: 6, order: 3 }} md={3}>
+          <Image src={phone} alt="call" className="icon" />
+          <Col>
+            <p>415.331.1709</p>
+          </Col>
+        </Col>
+        <Col xs={{ span: 6, order: 1 }} md={3}>
+          <Image src={message} alt="message" className="icon" />
+          <Col>
+            <a
+              class="btn-link pointer"
+              data-toggle="modal"
+              data-target="#contact-form-footer">
+              hello@glinorcal.com
+            </a>
+          </Col>
+        </Col>
+        <Col xs={{ span: 6, order: 6 }}>
+          <Image src={checkicon} alt="checkmark" className="icon" />
+          <Col>
+            <a
+              className="link-no-style"
+              href="https://www2.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=668200"
+              target="_blank">
+              CSLB Licensed Landscape <br />
+              Contractor #668200
+            </a>
           </Col>
         </Col>
       </Row>
@@ -135,12 +178,12 @@ const FooterMain = ({ siteTitle }) => (
   </div>
 )
 
-FooterMain.propTypes = {
-  siteTitle: PropTypes.string,
-}
+// FooterMain.propTypes = {
+//   siteTitle: PropTypes.string,
+// }
 
-FooterMain.defaultProps = {
-  siteTitle: ``,
-}
+// FooterMain.defaultProps = {
+//   siteTitle: ``,
+// }
 
 export default FooterMain
