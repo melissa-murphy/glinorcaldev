@@ -93,43 +93,42 @@ const FooterMain = ({ siteTitle }) => (
               Browse the job openings.
             </Nav.Link>
           </Nav>
-        </Col>
-        <Col 
-        lg={12} className="social-buttons text-right">
-          <p className="text-uppercase pb-0 mb-0">follow gli norcal</p>
-          <ul
-            className="d-flex flex-row justify-content-end mt-0
+          <Col className="pt-2 social-buttons text-right">
+            <p className="text-uppercase pb-0 mb-0">follow gli norcal</p>
+            <ul
+              className="d-flex flex-row justify-content-end mt-0
           pt-0">
-            <li className="px-0 icon">
-              <a
-                className="link-no-style"
-                rel="nofollow"
-                href="https://instagram.com"
-                title="Instagram">
-                <img src={instagramIcon} alt="Instagram" />{" "}
-              </a>
-              &nbsp;
-            </li>
-            <li className="px-0 icon">
-              <a
-                className="link-no-style"
-                rel="nofollow"
-                href="https://linkedin.com"
-                title="LinkedIn">
-                <img src={linkedInIcon} alt="LinkedIn" />{" "}
-              </a>
-              &nbsp;
-            </li>
-            <li className="px-0 icon">
-              <a
-                className="link-no-style"
-                rel="nofollow"
-                href="https://twitter.com"
-                title="Twitter">
-                <img src={twitterIcon} alt="Twitter" />
-              </a>
-            </li>
-          </ul>
+              <li className="px-0 icon">
+                <a
+                  className="link-no-style"
+                  rel="nofollow"
+                  href="https://instagram.com"
+                  title="Instagram">
+                  <img src={instagramIcon} alt="Instagram" />{" "}
+                </a>
+                &nbsp;
+              </li>
+              <li className="px-0 icon">
+                <a
+                  className="link-no-style"
+                  rel="nofollow"
+                  href="https://linkedin.com"
+                  title="LinkedIn">
+                  <img src={linkedInIcon} alt="LinkedIn" />{" "}
+                </a>
+                &nbsp;
+              </li>
+              <li className="px-0 icon">
+                <a
+                  className="link-no-style"
+                  rel="nofollow"
+                  href="https://twitter.com"
+                  title="Twitter">
+                  <img src={twitterIcon} alt="Twitter" />
+                </a>
+              </li>
+            </ul>
+          </Col>
         </Col>
       </Row>
     </Container>

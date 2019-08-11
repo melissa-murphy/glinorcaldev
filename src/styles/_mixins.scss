@@ -1,18 +1,18 @@
 @mixin link-design {
     text-decoration: none;
     border-bottom: 3px solid transparent;
-    transition: all .5s;
+    transition: all .75s;
   
     &:hover {
       text-decoration: none;
-      border-bottom: 3px solid $primary;
-      transition: all 0.5s;
+      border-bottom: 3px solid $success;
+      transition: all 0.75s;
     }
   }
   
   @mixin link-design-active {
     text-decoration: none;
-    border-bottom: 3px solid $primary;
+    border-bottom: 3px solid $success;
     transition: all .5s;
   }
   

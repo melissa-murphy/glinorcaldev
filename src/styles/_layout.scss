@@ -13,6 +13,16 @@ a.link-no-style {
   }
 }
 
+header {
+  .basic-navbar-nav {
+    .header-nav {
+      .header-nav-link {
+        @include link-design;
+      }
+    }
+  }
+}
+
 .footer-wrapper {
   background: gray;
   li {
@@ -23,7 +33,7 @@ a.link-no-style {
   }
 }
 
-.footer-nav {
+.flex-column .footer-nav {
   @include link-design;
   color: white;
 }
