@@ -19,8 +19,8 @@ const About = () => (
         />
       </Media>
       <Row>
-        <Col className="about-text pt-3">
-          <Card border="success" >
+        <Col className="about-text py-3">
+          <Card border="success">
             <Card.Body>
               <Card.Title>
                 GLI NorCal has built outstanding landscapes across the Bay Area
@@ -42,7 +42,6 @@ const About = () => (
         </Col>
       </Row>
     </Container>
-    <Link to="/" />
   </Layout>
 )
 

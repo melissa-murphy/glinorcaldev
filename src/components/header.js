@@ -1,6 +1,5 @@
-// import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import {Link} from "gatsby"
 import { Navbar, Nav } from "react-bootstrap"
 
 import logo from "../images/gli-oblong-logo.png"
@@ -18,34 +17,26 @@ const Header = () => (
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto mr-lg-5">
-          <Nav.Link className="active header-nav-link" href="/home">
-            Home
-          </Nav.Link>
-          <Nav.Link className="header-nav-link" href="/portfolio">
-            Portfolio
-          </Nav.Link>
-          <Nav.Link className="header-nav-link" href="/services">
-            Services
-          </Nav.Link>
-          <Nav.Link className="header-nav-link" href="/about">
-            About
-          </Nav.Link>
+          <Nav.Item className="nav-link">
+            <Link to="/" activeClassName="active" className="nav-link">Home</Link>
+          </Nav.Item>
+          <Nav.Item className="nav-link">
+            <Link to="/portfolio" activeClassName="active" className="nav-link">Portfolio</Link>
+          </Nav.Item>
+          <Nav.Item className="nav-link">
+            <Link to="/services" activeClassName="active" className="nav-link">Services</Link>
+          </Nav.Item>
+          <Nav.Item className="nav-link">
+            <Link to="/about" activeClassName="active" className="nav-link">About</Link>
+          </Nav.Item>
           {/* <Nav.Link href="#link">News</Nav.Link> */}
-          <Nav.Link className="header-nav-link" href="/contact">
-            Contact
-          </Nav.Link>
+          <Nav.Item className="nav-link">
+            <Link to="/contact" activeClassName="active" className="nav-link">Contact</Link>
+          </Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
   </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

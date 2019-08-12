@@ -22,6 +22,7 @@ const Layout = ({ children }) => (
           siteMetadata {
             title
             author
+            description
           }
         }
       }
@@ -39,7 +40,7 @@ const Layout = ({ children }) => (
           </Container>
         </Container>
         <Container fluid className="footer-wrapper">
-          <FooterMain siteTitle={data.site.siteMetadata.title} />
+          <FooterMain siteTitle={data.site.siteMetadata.title} tagline={data.site.siteMetadata.description} />
         </Container>
         <Container fluid className="px-0">
           <Row noGutters>

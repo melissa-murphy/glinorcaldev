@@ -19,12 +19,13 @@ import {
   Image,
 } from "react-bootstrap"
 
-const FooterMain = ({ siteTitle }) => (
+const FooterMain = ({ siteTitle, tagline }) => (
   <div>
     <Container style={{}}>
       <Row>
         <Col lg={6}>
           <p className="h1 mb-2 pt-5 pb-2 text-light">{siteTitle}</p>
+          <p className="">{tagline}</p>
         </Col>
       </Row>
       <Row>
@@ -90,7 +91,7 @@ const FooterMain = ({ siteTitle }) => (
             Career Opportunities
           </h6>
 
-          <Nav pullRight>
+          <Nav>
             <Nav.Link className="text-light mx-auto" href="/careers">
               Browse the job openings.
             </Nav.Link>
@@ -144,7 +145,7 @@ const FooterMain = ({ siteTitle }) => (
             </a>
           </Col>
         </Col>
-        <Col xs={{ span: 6, order: 3 }}  md={{ span: 3, order: 3 }}>
+        <Col xs={{ span: 6, order: 3 }} md={{ span: 3, order: 3 }}>
           <Image src={phone} alt="call" className="icon" />
           <Col>
             <p>415.331.1709</p>
