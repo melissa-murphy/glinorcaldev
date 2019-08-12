@@ -1,0 +1,21 @@
+.about-image {
+  @media (min-width: $desktop) {
+    padding-top: 10rem;
+    max-width: 75%;
+    img {
+        box-shadow: $dropshadow;
+    }
+  }
+}
+
+.about-text {
+    @media(min-width: $desktop) {
+        max-width: 75%;
+        margin-top: -10rem;
+        padding-left: 10rem;
+        margin-left: 20rem;
+        .card {
+            box-shadow: $dropshadow;
+        }
+    }
+}

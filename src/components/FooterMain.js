@@ -132,7 +132,7 @@ const FooterMain = ({ siteTitle }) => (
         </Col>
       </Row>
       <Row className="footer-info-links">
-        <Col xs={{ span: 6, order: 12 }} md={3}>
+        <Col xs={{ span: 6, order: 12 }} md={{ span: 3, order: 1 }}>
           <Image src={map} alt="address" className="icon" />
           <Col>
             <a
@@ -144,13 +144,13 @@ const FooterMain = ({ siteTitle }) => (
             </a>
           </Col>
         </Col>
-        <Col xs={{ span: 6, order: 3 }} md={3}>
+        <Col xs={{ span: 6, order: 3 }}  md={{ span: 3, order: 3 }}>
           <Image src={phone} alt="call" className="icon" />
           <Col>
             <p>415.331.1709</p>
           </Col>
         </Col>
-        <Col xs={{ span: 6, order: 1 }} md={3}>
+        <Col xs={{ span: 6, order: 1 }} md={{ span: 3, order: 6 }}>
           <Image src={message} alt="message" className="icon" />
           <Col>
             <a
@@ -161,7 +161,7 @@ const FooterMain = ({ siteTitle }) => (
             </a>
           </Col>
         </Col>
-        <Col xs={{ span: 6, order: 6 }}>
+        <Col xs={{ span: 6, order: 6 }} md={{ span: 3, order: 12 }}>
           <Image src={checkicon} alt="checkmark" className="icon" />
           <Col>
             <a
