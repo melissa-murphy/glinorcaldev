@@ -155,7 +155,7 @@ const FooterMain = ({ siteTitle, tagline }) => (
           <Image src={message} alt="message" className="icon" />
           <Col>
             <a
-              class="btn-link pointer"
+              className="btn-link pointer"
               data-toggle="modal"
               data-target="#contact-form-footer">
               hello@glinorcal.com

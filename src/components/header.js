@@ -5,8 +5,8 @@ import { Navbar, Nav } from "react-bootstrap"
 import logo from "../images/gli-oblong-logo.png"
 
 const Header = () => (
-  <header className="shadow-lg">
-    <Navbar fixed="top" bg="light" expand="lg" className="header-nav">
+  <header>
+    <Navbar fixed="top" bg="light" expand="lg" className="header-nav shadow-lg">
       <Navbar.Brand href="#home">
         <img
           src={logo}
