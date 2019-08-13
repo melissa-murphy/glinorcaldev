@@ -1,20 +1,30 @@
 import React from "react"
 // import { Link } from "gatsby"
-import Image from "gatsby-image"
+import { StaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Container, Row, Col } from "react-bootstrap"
 import styled from "styled-components"
 
-import belMarinKeys from "../images/bel-marin-keys/bel-marin-1.jpg"
-import belvedereFirePit from "../images/belvedere-firepit/belvedere-firepit-1.jpg"
-import belvedereLagoon from "../images/belvedere-lagoon/belvedere-lagoon-1.jpg"
-import piedmont from "../images/piedmont/piedmont-1.jpg"
-import sanFrancisco from "../images/san-francisco/sf-1.jpg"
-import sanRafael from "../images/san-rafael/san-rafael-1.jpg"
+// import belMarinKeys from "./bel-marin-keys/bel-marin-1.jpg"
+// import belvedereFirePit from "./belvedere-firepit/belvedere-firepit-1.jpg"
+// import belvedereLagoon from "./belvedere-lagoon/belvedere-lagoon-1.jpg"
+// import piedmont from "./piedmont/piedmont-1.jpg"
+// import sanFrancisco from "./san-francisco/sf-1.jpg"
+// import sanRafael from "./san-rafael/san-rafael-1.jpg"
 
-const ImgCard = styled(Image)`
+export const portfolioLinkImage = graphql`
+  fragment portfolioLinkImage on File {
+    childImageSharp {
+      fluid(maxWidth: 600, maxHeight: 600) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
+const ImgCard = styled(Img)`
   box-shadow: 4px 5px 10px grey;
   height: 40vh;
   width: 100%;
