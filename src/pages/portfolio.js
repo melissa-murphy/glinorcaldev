@@ -1,9 +1,11 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
+import Image from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Container, Row, Col, Card } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
+import styled from "styled-components"
 
 import belMarinKeys from "../images/bel-marin-keys/bel-marin-1.jpg"
 import belvedereFirePit from "../images/belvedere-firepit/belvedere-firepit-1.jpg"
@@ -12,83 +14,83 @@ import piedmont from "../images/piedmont/piedmont-1.jpg"
 import sanFrancisco from "../images/san-francisco/sf-1.jpg"
 import sanRafael from "../images/san-rafael/san-rafael-1.jpg"
 
+const ImgCard = styled(Image)`
+  box-shadow: 4px 5px 10px grey;
+  height: 40vh;
+  width: 100%;
+  background-size: cover;
+  background-position-y: ${props => props.yPosition};
+  background-position-x: ${props => props.xPosition};
+  background-image: url(${props => props.src});
+`
+const PortfolioLink = props => (
+  <div>
+    <ImgCard
+      src={props.src}
+      alt={props.alt}
+      yPosition={props.yPosition}
+      xPosition={props.xPosition}
+    />
+  </div>
+)
+
 const Portfolio = () => (
   <Layout pageInfo={{ pageName: "portfolio" }}>
     <SEO title="Portfolio" />
-    <Container style={{ marginTop: `7rem` }}>
+    <Container style={{ marginTop: `7rem`, marginBottom: `2rem` }}>
       <Row className="mb-4">
         <Col xs={12} md={6} lg={4}>
-          <Card
-            style={{
-              height: `40vh`,
-              backgroundImage: `url(${belMarinKeys})`,
-              backgroundSize: `cover`,
-              backgroundPositionY: `bottom`,
-              backgroundPositionX: `50%`,
-            }}
+          <PortfolioLink
+            src={belMarinKeys}
+            alt="Bel Marin Keys"
+            yPosition="70%"
           />
         </Col>
         <Col xs={12} md={6} lg={4}>
           {" "}
-          <Card
-            style={{
-              height: `40vh`,
-              backgroundImage: `url(${belvedereFirePit})`,
-              backgroundSize: `cover`,
-              backgroundPositionY: `center`,
-              backgroundPositionX: `center`,
-            }}
+          <PortfolioLink
+            src={belvedereFirePit}
+            yPosition="center"
+            xPosition="center"
+            alt="Belvedere Island Fire Pit"
           />
         </Col>
         <Col xs={12} md={6} lg={4}>
           {" "}
-          <Card
-            style={{
-              height: `40vh`,
-              backgroundImage: `url(${belvedereLagoon})`,
-              backgroundSize: `cover`,
-              backgroundPositionY: `bottom`,
-              backgroundPositionX: `50%`,
-            }}
+          <PortfolioLink
+            src={belvedereLagoon}
+            yPosition="center"
+            xPosition="center"
+            alt="Belvedere Island Lagoon"
           />
         </Col>
       </Row>
       <Row>
         <Col xs={12} md={6} lg={4}>
           {" "}
-          <Card
-            style={{
-              height: `40vh`,
-              backgroundImage: `url(${piedmont})`,
-              backgroundSize: `cover`,
-              backgroundPositionY: `center`,
-              backgroundPositionX: `center`,
-            }}
+          <PortfolioLink
+            src={piedmont}
+            yPosition="center"
+            xPosition="center"
+            alt="Grand Piedmont Estate"
           />
         </Col>
         <Col xs={12} md={6} lg={4}>
           {" "}
-          <Card
-            style={{
-              height: `40vh`,
-              backgroundImage: `url(${sanFrancisco})`,
-              backgroundSize: `cover`,
-              backgroundPositionY: `top`,
-              backgroundSize: `cover`,
-              backgroundPositionX: `center`,
-            }}
+          <PortfolioLink
+            src={sanFrancisco}
+            yPosition="bottom"
+            xPosition="center"
+            alt="Petite San Francisco Back Yard"
           />
         </Col>
         <Col xs={12} md={6} lg={4}>
           {" "}
-          <Card
-            style={{
-              height: `40vh`,
-              backgroundImage: `url(${sanRafael})`,
-              backgroundSize: `cover`,
-              backgroundPositionY: `center`,
-              backgroundPositionX: `center`,
-            }}
+          <PortfolioLink
+            src={sanRafael}
+            yPosition="center"
+            xPosition="center"
+            alt="San Rafael Custom Stone"
           />
         </Col>
       </Row>

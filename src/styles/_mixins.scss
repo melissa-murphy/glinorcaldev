@@ -24,3 +24,11 @@
       background-repeat: no-repeat;
   }
   }
+
+  @mixin div-background-image {
+    box-shadow: $dropshadow;
+    height: 40vh;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+  }

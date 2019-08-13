@@ -21,6 +21,7 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -33,6 +34,7 @@ module.exports = {
         background_color: `#20232a`,
         theme_color: `#798d64`,
         display: `minimal-ui`,
+        icon: `src/images/favicon/glinorcal.png`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
