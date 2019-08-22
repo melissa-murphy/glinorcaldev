@@ -1,22 +1,21 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { useSiteMetadata } from "../hooks/use-site-metadata"
 import { Container, Media, Row, Col, Card } from "react-bootstrap"
 
 import aboutImage from "../images/stone-bg.jpg"
 
-const About = () => (
-  <Layout pageInfo={{ pageName: "about" }}>
+
+const About = () => {
+  const { title } = useSiteMetadata()
+  ;<Layout pageInfo={{ pageName: "about" }}>
     <SEO title="About Us: GLI Norcal Landscape Construction" />
     <Container>
       <Media className="about-image">
-        <img
-          className="img img-fluid rounded"
-          src={aboutImage}
-          alt="About GLI Norcal Landscape Construction image"
-        />
+        <img className="img img-fluid rounded" src={aboutImage} alt={title} />
       </Media>
       <Row>
         <Col className="about-text py-3">
@@ -43,6 +42,6 @@ const About = () => (
       </Row>
     </Container>
   </Layout>
-)
+}
 
 export default About
