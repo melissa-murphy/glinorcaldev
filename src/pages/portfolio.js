@@ -1,12 +1,19 @@
 import React from "react"
 // import { Link } from "gatsby"
-import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { graphql, Link } from "gatsby"
+// import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Container, Row, Col } from "react-bootstrap"
 import styled from "styled-components"
+
+import belmarinkeys from "../images/portfolio-links/bel-marin-1.jpg"
+import piedmont from "../images/portfolio-links/piedmont-1.jpg"
+import belvederefire from "../images/portfolio-links/belvedere-firepit-1.jpg"
+import sanrafael from "../images/portfolio-links/san-rafael-1.jpg"
+import sanfrancisco from "../images/portfolio-links/sf-1.jpg"
+import belvederelagoon from "../images/portfolio-links/belvedere-lagoon-1.jpg"
 
 export const portfolioLinkImage = graphql`
   fragment portfolioLinkImage on File {
@@ -19,6 +26,7 @@ export const portfolioLinkImage = graphql`
 `
 
 const ImgCard = styled.div`
+  margin-bottom: 1rem;
   box-shadow: 4px 5px 10px grey;
   height: 40vh;
   width: 100%;
@@ -42,60 +50,69 @@ const Portfolio = () => (
   <Layout pageInfo={{ pageName: "portfolio" }}>
     <SEO title="Portfolio" />
     <Container style={{ marginTop: `7rem`, marginBottom: `2rem` }}>
-      <Row className="mb-4">
+      <Row>
         <Col xs={12} md={6} lg={4}>
-          <PortfolioLink
-            src={"../images/portfolio-links/bel-marin-1.jpg"}
-            alt="Bel Marin Keys"
-            yPosition="70%"
-          />
+          <Link to="/belmarinkeys">
+            <PortfolioLink
+              src={belmarinkeys}
+              alt="Bel Marin Keys"
+              yPosition="bottom"
+            />
+          </Link>
         </Col>
         <Col xs={12} md={6} lg={4}>
           {" "}
-          <PortfolioLink
-            src={"../images/portfolio-links/belvedere-firepit-1.jpg"}
-            yPosition="center"
-            xPosition="center"
-            alt="Belvedere Island Fire Pit"
-          />
+          <Link to="/belmarinkeys">
+            <PortfolioLink
+              src={belvederefire}
+              yPosition="center"
+              xPosition="center"
+              alt="Belvedere Island Fire Pit"
+            />
+          </Link>
         </Col>
         <Col xs={12} md={6} lg={4}>
           {" "}
+          <Link to="/belvederelagoon">
           <PortfolioLink
-            src={"../images/portfolio-links/belvedere-lagoon-1.jpg"}
+            src={belvederelagoon}
             yPosition="center"
             xPosition="center"
             alt="Belvedere Island Lagoon"
           />
+          </Link>
         </Col>
-      </Row>
-      <Row>
         <Col xs={12} md={6} lg={4}>
           {" "}
+          <Link to="/piedmont">
           <PortfolioLink
-            src={"../images/portfolio-links/piedmont-1.jpg"}
+            src={piedmont}
             yPosition="center"
             xPosition="center"
             alt="Grand Piedmont Estate"
-          />
+          /></Link>
         </Col>
         <Col xs={12} md={6} lg={4}>
           {" "}
+          <Link to="/sanfrancisco">
           <PortfolioLink
-            src={"../images/portfolio-links/sf-1.jpg"}
+            src={sanfrancisco}
             yPosition="bottom"
             xPosition="center"
             alt="Petite San Francisco Back Yard"
           />
+          </Link>
         </Col>
         <Col xs={12} md={6} lg={4}>
           {" "}
+          <Link to="/sanrafael">
           <PortfolioLink
-            src={"../images/portfolio-links/san-rafael-1.jpg"}
+            src={sanrafael}
             yPosition="center"
             xPosition="center"
             alt="San Rafael Custom Stone"
           />
+          </Link>
         </Col>
       </Row>
     </Container>

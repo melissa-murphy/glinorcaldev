@@ -20,8 +20,8 @@ import {
 } from "react-bootstrap"
 
 const FooterMain = ({ siteTitle, tagline }) => (
-  <div>
-    <Container style={{}}>
+  <div >
+    <Container >
       <Row>
         <Col lg={6}>
           <p className="h1 mb-2 pt-5 pb-2 text-light">{siteTitle}</p>
@@ -31,7 +31,9 @@ const FooterMain = ({ siteTitle, tagline }) => (
       <Row>
         <Col xs={6} md={3}>
           <Nav defaultActiveKey="/home" className="flex-column">
-            <h6 className="text-uppercase">Information</h6>
+            <h6 className="text-uppercase border-bottom border-dark">
+              Information
+            </h6>
             <Nav.Link className="footer-nav" href="/portfolio">
               Projects
             </Nav.Link>
@@ -45,7 +47,7 @@ const FooterMain = ({ siteTitle, tagline }) => (
         </Col>
         <Col xs={6} md={3}>
           <Nav defaultActiveKey="/home" className="flex-column">
-            <h6 className="text-uppercase">About</h6>
+            <h6 className="text-uppercase border-bottom border-dark">About</h6>
             <Nav.Link className="footer-nav" href="/contact">
               Contact
             </Nav.Link>
@@ -58,7 +60,9 @@ const FooterMain = ({ siteTitle, tagline }) => (
           </Nav>
         </Col>
         <Col sm={12} md={3}>
-          <h6 className="text-uppercase">Stay Posted</h6>
+          <h6 className="text-uppercase border-bottom border-dark">
+            Stay Posted
+          </h6>
           <p id="subscribe" className="text-light font-weight-light">
             Get insight on the landscape industry and helpful tips to get the
             most out of your construction project.
@@ -86,8 +90,8 @@ const FooterMain = ({ siteTitle, tagline }) => (
             </FormGroup>
           </Form>
         </Col>
-        <Col xs={12} lg={3} className="jobs-link text-center">
-          <h6 className="default-pointer text-uppercase ">
+        <Col xs={12} lg={3} className="jobs-link text-right">
+          <h6 className="default-pointer text-uppercase border-bottom border-dark ">
             Career Opportunities
           </h6>
 
@@ -96,7 +100,7 @@ const FooterMain = ({ siteTitle, tagline }) => (
               Browse the job openings.
             </Nav.Link>
           </Nav>
-          <Col className="pt-2 social-buttons">
+          <Col className="pt-2 social-buttons text-center">
             <p className="text-uppercase pb-0 mb-0">follow gli norcal</p>
             <Row>
               <Col xs={{ span: 1, offset: 4 }}>

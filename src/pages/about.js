@@ -10,7 +10,7 @@ import aboutImage from "../images/stone-bg.jpg"
 
 
 const About = () => {
-  const { title } = useSiteMetadata()
+  // const { title } = useSiteMetadata()
   ;<Layout pageInfo={{ pageName: "about" }}>
     <SEO title="About Us: GLI Norcal Landscape Construction" />
     <Container>
