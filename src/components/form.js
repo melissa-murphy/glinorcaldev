@@ -5,45 +5,44 @@ import useInput from "../hooks/userInput"
 import { Form, Row, Col, Button } from "react-bootstrap"
 
 const Contactform = () => {
-  contactform = () => {
-    contactform = () => {
-      const params = {
-        email: inputs.email,
-        name: inputs.name,
-        message: inputs.message,
-      }
-      const service_id = "default_service"
-      const template_id = "contactpage"
-      const user_id = "user_2aCUzqnCuE4sSeqWgys7M"
+  const contactform = () => {
+    const params = {
+      email: inputs.email,
+      name: inputs.name,
+      message: inputs.message,
+    }
+    const service_id = "default_service"
+    const template_id = "contactform"
+    const user_id = "user_2aCUzqnCuE4sSeqWgys7M"
 
-      const sendMessage = () => {
-        emailjs.send(service_id, template_id, params, user_id).then(
-          res => {
-            console.log(`Success`, res.status, res.text)
-          },
-          err => {
-            console.log(`Failed`, err)
-          }
-        )
-      }
-      sendMessage()
-
-      // console.log(`checking for input` + inputs.name + `did they show?`)
-      alert(
-        `Thank you for your message ${inputs.name}! We'll get back to you soon!`
+    const sendMessage = () => {
+      emailjs.send(service_id, template_id, params, user_id).then(
+        res => {
+          console.log(`Success`, res.status, res.text)
+        },
+        err => {
+          console.log(`Failed`, err)
+        }
       )
     }
-    const { inputs, handleInputChange, handleSubmit } = useInput(
-      {
-        name: "",
-        email: "",
-        message: "",
-      },
-      contactform
+    sendMessage()
+
+    // console.log(`checking for input` + inputs.name + `did they show?`)
+    alert(
+      `Thank you for your message ${inputs.name}! We'll get back to you soon!`
     )
   }
+  const { inputs, handleInputChange, handleSubmit } = useInput(
+    {
+      name: "",
+      email: "",
+      message: "",
+    },
+    contactform
+  )
+
   return (
-    <Form id="contactform" onSubmit={handleSubmit}>
+    <Form id="contactPageForm" onSubmit={handleSubmit}>
       <Row>
         <Col xs={12} md={6}>
           <Form.Group>
@@ -83,7 +82,7 @@ const Contactform = () => {
           onChange={handleInputChange}
           placeholder="How can we help you?"></Form.Control>
       </Form.Group>
-      <Button variant="success" size="lg">
+      <Button variant="success" size="lg" type="submit">
         Send a message
       </Button>
     </Form>
