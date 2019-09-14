@@ -8,6 +8,8 @@ import SEO from "../components/seo"
 
 import "react-image-gallery/styles/css/image-gallery.css"
 import image1 from "../images/bel-marin-keys/bel-marin-1.jpg"
+import image1P from "../images/bel-marin-keys/bel-marin-1P.jpg"
+import image1L from "../images/bel-marin-keys/bel-marin-1L.jpg"
 import image2 from "../images/bel-marin-keys/bel-marin-2.jpg"
 import image3 from "../images/bel-marin-keys/bel-marin-3.jpg"
 import image4 from "../images/bel-marin-keys/bel-marin-4.jpg"
@@ -18,7 +20,6 @@ import image8 from "../images/bel-marin-keys/bel-marin-8.jpg"
 import image9 from "../images/bel-marin-keys/bel-marin-9.jpg"
 
 const BelMarinKeys = () => {
-  
   const settings = {
     fade: true,
     infinite: true,
@@ -36,10 +37,7 @@ const BelMarinKeys = () => {
             matches ? (
               <Slider {...settings}>
                 <div>
-                  <img
-                    className="img img-fluid"
-                    src={image1}
-                    alt="image1" />
+                  <img className="img img-fluid" src={image1P} alt="image1" />
                 </div>
               </Slider>
             ) : (
@@ -47,7 +45,7 @@ const BelMarinKeys = () => {
                 <div>
                   <img
                     className="img img-fluid"
-                    src={image1}
+                    src={image1L}
                     alt="image1"></img>
                 </div>
               </Slider>
