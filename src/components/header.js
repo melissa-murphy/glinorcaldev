@@ -7,7 +7,7 @@ import logo from "../images/gli-oblong-logo.png"
 const Header = () => (
   <header>
     <Navbar fixed="top" bg="light" expand="lg" className="header-nav shadow-lg">
-      <Navbar.Brand href="#home">
+      <Navbar.Brand href="/">
         <img
           src={logo}
           className="nav-logo img-fluid ml-lg-5"

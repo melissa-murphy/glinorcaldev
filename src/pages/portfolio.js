@@ -1,4 +1,5 @@
 import React from "react"
+
 // import { Link } from "gatsby"
 import { graphql, Link } from "gatsby"
 // import Img from "gatsby-image"
@@ -62,7 +63,7 @@ const Portfolio = () => (
         </Col>
         <Col xs={12} md={6} lg={4}>
           {" "}
-          <Link to="/belmarinkeys">
+          <Link to="/belvederefire">
             <PortfolioLink
               src={belvederefire}
               yPosition="center"
