@@ -36,19 +36,19 @@ const BelvedereFire = () => {
               <Slider {...settings}>
                 <div>
                   <img className="img img-fluid" src={image1P} alt="image1" />
-                </div>{" "}
+                </div>
                 <div>
                   <img className="img img-fluid" src={image2P} alt="image1" />
-                </div>{" "}
+                </div>
                 <div>
                   <img className="img img-fluid" src={image3P} alt="image1" />
-                </div>{" "}
+                </div>
                 <div>
                   <img className="img img-fluid" src={image4P} alt="image1" />
-                </div>{" "}
+                </div>
                 <div>
                   <img className="img img-fluid" src={image5P} alt="image1" />
-                </div>{" "}
+                </div>
                 <div>
                   <img className="img img-fluid" src={image6P} alt="image1" />
                 </div>
