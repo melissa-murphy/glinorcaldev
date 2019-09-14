@@ -1,7 +1,7 @@
 import React from "react"
 import Media from "react-responsive"
+import Slider from "react-slick"
 import { Container } from "react-bootstrap"
-import ImageGallery from "react-image-gallery"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -18,49 +18,14 @@ import image8 from "../images/bel-marin-keys/bel-marin-8.jpg"
 import image9 from "../images/bel-marin-keys/bel-marin-9.jpg"
 
 const BelMarinKeys = () => {
-  const mobileimages = [
-    {
-      original: image1,
-      thumbnail: image1,
-    },
-    {
-      original: image3,
-      thumbnail: image3,
-    },
-    {
-      original: image5,
-      thumbnail: image5,
-    },
-    {
-      original: image8,
-      thumbnail: image8,
-    },
-  ]
-  const desktopimages = [
-    {
-      original: image2,
-      thumbnail: image2,
-    },
-
-    {
-      original: image4,
-      thumbnail: image4,
-    },
-
-    {
-      original: image6,
-      thumbnail: image6,
-    },
-    {
-      original: image7,
-      thumbnail: image7,
-    },
-
-    {
-      original: image9,
-      thumbnail: image9,
-    },
-  ]
+  
+  const settings = {
+    fade: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+  }
 
   return (
     <Layout pageInfo={{ pageName: "Bel Marin Keys" }}>
@@ -69,21 +34,23 @@ const BelMarinKeys = () => {
         <Media query="(max-width: 768px)">
           {matches =>
             matches ? (
-              <ImageGallery
-                showPlayButton={false}
-                showFullscreenButton={false}
-                items={mobileimages}
-                autoPlay={true}
-                slideDuration={1600}
-              />
+              <Slider {...settings}>
+                <div>
+                  <img
+                    className="img img-fluid"
+                    src={image1}
+                    alt="image1" />
+                </div>
+              </Slider>
             ) : (
-              <ImageGallery
-                showPlayButton={false}
-                showFullscreenButton={false}
-                items={desktopimages}
-                autoPlay={true}
-                slideDuration={1600}
-              />
+              <Slider {...settings}>
+                <div>
+                  <img
+                    className="img img-fluid"
+                    src={image1}
+                    alt="image1"></img>
+                </div>
+              </Slider>
             )
           }
         </Media>
