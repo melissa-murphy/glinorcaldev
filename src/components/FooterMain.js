@@ -96,7 +96,11 @@ const FooterMain = ({ siteTitle, tagline }) => (
           </h6>
 
           <Nav>
-            <Nav.Link className="text-light mx-auto" href="/careers">
+            <Nav.Link
+              className="text-light mx-auto"
+              href="https://www.indeed.com/cmp/Gli-Norcal-Landscape-Construction/jobs"
+              target="_blank"
+              rel="noreferrer noopener">
               Browse the job openings.
             </Nav.Link>
           </Nav>

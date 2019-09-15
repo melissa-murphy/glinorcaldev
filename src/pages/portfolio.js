@@ -31,10 +31,23 @@ const ImgCard = styled.div`
   box-shadow: 4px 5px 10px grey;
   height: 40vh;
   width: 100%;
+  position: relative;
   background-size: cover;
   background-position-y: ${props => props.yPosition};
   background-position-x: ${props => props.xPosition};
   background-image: url(${props => props.src});
+  transition: all 1s ease;
+  :hover {
+  }
+`
+const ImgHover = styled.div`
+  color: white;
+  height: 96%;
+  width: 92%;
+  position: absolute;
+  top: 0;
+  padding-left: 2rem;
+  padding-top: 4rem;
   transition: all 1s ease;
   :hover {
     background: rgba(0, 0, 0, 0.6);
@@ -65,6 +78,9 @@ const Portfolio = () => (
               alt="Bel Marin Keys"
               yPosition="bottom"
             />
+            <ImgHover>
+              <h2>Bel Marin Keys</h2>
+            </ImgHover>
           </Link>
         </Col>
         <Col xs={12} md={6} lg={4}>
@@ -76,6 +92,9 @@ const Portfolio = () => (
               xPosition="center"
               alt="Belvedere Island Fire Pit"
             />
+            <ImgHover>
+              <h2>Belvedere</h2>
+            </ImgHover>
           </Link>
         </Col>
         <Col xs={12} md={6} lg={4}>
@@ -87,6 +106,9 @@ const Portfolio = () => (
               xPosition="center"
               alt="Belvedere Island Lagoon"
             />
+            <ImgHover>
+              <h2>Belvedere Lagoon</h2>
+            </ImgHover>
           </Link>
         </Col>
         <Col xs={12} md={6} lg={4}>
@@ -98,6 +120,9 @@ const Portfolio = () => (
               xPosition="center"
               alt="Grand Piedmont Estate"
             />
+            <ImgHover>
+              <h2>Piedmont</h2>
+            </ImgHover>
           </Link>
         </Col>
         <Col xs={12} md={6} lg={4}>
@@ -109,6 +134,9 @@ const Portfolio = () => (
               xPosition="center"
               alt="Petite San Francisco Back Yard"
             />
+            <ImgHover>
+              <h2>San Francisco</h2>
+            </ImgHover>
           </Link>
         </Col>
         <Col xs={12} md={6} lg={4}>
@@ -120,6 +148,9 @@ const Portfolio = () => (
               xPosition="center"
               alt="San Rafael Custom Stone"
             />
+            <ImgHover>
+              <h2>San Rafael</h2>
+            </ImgHover>
           </Link>
         </Col>
       </Row>
