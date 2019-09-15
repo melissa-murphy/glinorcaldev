@@ -90,24 +90,24 @@ const FooterMain = ({ siteTitle, tagline }) => (
             </FormGroup>
           </Form>
         </Col>
-        <Col xs={12} lg={3} className="jobs-link text-right">
-          <h6 className="default-pointer text-uppercase border-bottom border-dark ">
-            Career Opportunities
+        <Col xs={12} md={3}>
+          <h6 className="default-pointer text-uppercase border-bottom border-dark text-right">
+            Careers at GLI
           </h6>
+          <a
+            className="text-light"
+            href="https://www.indeed.com/cmp/Gli-Norcal-Landscape-Construction/jobs"
+            target="_blank"
+            rel="noreferrer noopener">
+            <p className="text-right ">Browse the job openings.</p>
+          </a>
 
-          <Nav>
-            <Nav.Link
-              className="text-light mx-auto"
-              href="https://www.indeed.com/cmp/Gli-Norcal-Landscape-Construction/jobs"
-              target="_blank"
-              rel="noreferrer noopener">
-              Browse the job openings.
-            </Nav.Link>
-          </Nav>
-          <Col className="pt-2 social-buttons text-center">
-            <p className="text-uppercase pb-0 mb-0">follow gli norcal</p>
+          <Col className="pt-5 pt-md-2 social-buttons text-right text-md-center ">
+            <p className="text-uppercase border-bottom border-dark pb-0 mb-0">
+              follow gli norcal
+            </p>
             <Row>
-              <Col xs={{ span: 1, offset: 4 }}>
+              <Col xs={{ span: 1, offset: 8 }} md={{ span: 1, offset: 1 }}>
                 <a
                   className="link-no-style"
                   rel="nofollow"
@@ -140,48 +140,54 @@ const FooterMain = ({ siteTitle, tagline }) => (
           </Col>
         </Col>
       </Row>
-      <Row className="footer-info-links">
-        <Col xs={{ span: 6, order: 12 }} md={{ span: 3, order: 1 }}>
-          <Image src={map} alt="address" className="icon" />
-          <Col>
-            <a
-              className="link-no-style"
-              href="https://www.google.com/maps/place/GLI+Norcal+Landscape+Construction/@37.939707,-122.514235,15z/data=!4m5!3m4!1s0x0:0x8c67891c5a08c38c!8m2!3d37.939707!4d-122.514235"
-              target="_blank">
-              125 Rich Street <br />
-              Greenbrae, CA 94904
-            </a>
+      <Container className="footer-info-links">
+        <Row>
+          <Col md={{ span: 4, offset: 2 }}>
+            <div>
+              <Image src={message} alt="message" className="icon" />
+              <Col>
+                <Nav.Link
+                  className="btn-link pt-0 link-no-style"
+                  href="/contact">
+                  hello@glinorcal.com
+                </Nav.Link>
+              </Col>
+            </div>
           </Col>
-        </Col>
-        <Col xs={{ span: 6, order: 3 }} md={{ span: 3, order: 3 }}>
-          <Image src={phone} alt="call" className="icon" />
-          <Col>
-            <p>415.331.1709</p>
+          <Col xs={12} md={4}>
+            <Image src={phone} alt="call" className="icon" />
+            <Col>
+              <p className="link-no-style">415.331.1709</p>
+            </Col>
           </Col>
-        </Col>
-        <Col xs={{ span: 6, order: 1 }} md={{ span: 3, order: 6 }}>
-          <Image src={message} alt="message" className="icon" />
-          <Col>
-            <Nav.Link
-              className="btn-link link-no-style"
-              href="/contact">
-              hello@glinorcal.com
-            </Nav.Link>
+        </Row>
+        <Row>
+          <Col xs={12} md={{ span: 4 }}>
+            <Image src={map} alt="address" className="icon" />
+            <Col>
+              <a
+                className="link-no-style"
+                href="https://www.google.com/maps/place/GLI+Norcal+Landscape+Construction/@37.939707,-122.514235,15z/data=!4m5!3m4!1s0x0:0x8c67891c5a08c38c!8m2!3d37.939707!4d-122.514235"
+                target="_blank">
+                125 Rich Street <br />
+                Greenbrae, CA 94904
+              </a>
+            </Col>
           </Col>
-        </Col>
-        <Col xs={{ span: 6, order: 6 }} md={{ span: 3, order: 12 }}>
-          <Image src={checkicon} alt="checkmark" className="icon" />
-          <Col>
-            <a
-              className="link-no-style"
-              href="https://www2.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=668200"
-              target="_blank">
-              CSLB Licensed Landscape <br />
-              Contractor #668200
-            </a>
+          <Col xs={12} md={{ span: 4, offset: 4 }}>
+            <Image src={checkicon} alt="checkmark" className="icon" />
+            <Col>
+              <a
+                className="link-no-style"
+                href="https://www2.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=668200"
+                target="_blank">
+                CSLB Licensed Landscape <br />
+                Contractor #668200
+              </a>
+            </Col>
           </Col>
-        </Col>
-      </Row>
+        </Row>
+      </Container>
     </Container>
   </div>
 )

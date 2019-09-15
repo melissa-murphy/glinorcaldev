@@ -30,19 +30,27 @@ const IndexPage = () => {
           {matches =>
             matches ? (
               <Slider {...settings}>
-                <img className="img img-fluid" src={image1P} alt="image1P" />
-
-                <img className="img img-fluid" src={image2P} alt="image2P" />
-
-                <img className="img img-fluid" src={image3P} alt="image3P" />
+                <div>
+                  <img className="img img-fluid" src={image1P} alt="image1P" />
+                </div>
+                <div>
+                  <img className="img img-fluid" src={image2P} alt="image2P" />
+                </div>
+                <div>
+                  <img className="img img-fluid" src={image3P} alt="image3P" />{" "}
+                </div>
               </Slider>
             ) : (
               <Slider {...settings}>
-                <img className="img img-fluid" src={image1} alt="image1" />
-
-                <img className="img img-fluid" src={image2} alt="image2" />
-
-                <img className="img img-fluid" src={image3} alt="image3" />
+                <div>
+                  <img className="img img-fluid" src={image1} alt="image1" />
+                </div>
+                <div>
+                  <img className="img img-fluid" src={image2} alt="image2" />
+                </div>
+                <div>
+                  <img className="img img-fluid" src={image3} alt="image3" />
+                </div>
               </Slider>
             )
           }

@@ -38,5 +38,10 @@
     @content;
   }
 }
+@mixin desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
 
 
