@@ -162,12 +162,11 @@ const FooterMain = ({ siteTitle, tagline }) => (
         <Col xs={{ span: 6, order: 1 }} md={{ span: 3, order: 6 }}>
           <Image src={message} alt="message" className="icon" />
           <Col>
-            <a
-              className="btn-link pointer"
-              data-toggle="modal"
-              data-target="#contact-form-footer">
+            <Nav.Link
+              className="btn-link link-no-style"
+              href="/contact">
               hello@glinorcal.com
-            </a>
+            </Nav.Link>
           </Col>
         </Col>
         <Col xs={{ span: 6, order: 6 }} md={{ span: 3, order: 12 }}>

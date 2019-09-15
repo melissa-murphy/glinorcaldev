@@ -53,7 +53,7 @@ const Layout = ({ children }) => (
                   <small>
                     © {new Date().getFullYear()}, GLI Norcal Landscape
                     Construction Inc., All Rights Reserved <br />
-                    Built with <FaHeart /> by
+                    Built with <FaHeart /> by {""}
                     {data.site.siteMetadata.author}
                   </small>
                 </span>
