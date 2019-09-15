@@ -1,4 +1,4 @@
-import PropTypes from "prop-types"
+// import PropTypes from "prop-types"
 import React from "react"
 import instagramIcon from "../images/icons/instagram.png"
 import linkedInIcon from "../images/icons/linkedin.png"
@@ -20,8 +20,8 @@ import {
 } from "react-bootstrap"
 
 const FooterMain = ({ siteTitle, tagline }) => (
-  <div >
-    <Container >
+  <div>
+    <Container>
       <Row>
         <Col lg={6}>
           <p className="h1 mb-2 pt-5 pb-2 text-light">{siteTitle}</p>

@@ -1,34 +1,42 @@
 @mixin link-design {
-    text-decoration: none;
-    border-bottom: 3px solid transparent;
-    transition: all .75s;
-  
-    &:hover {
-      text-decoration: none;
-      border-bottom: 3px solid $success;
-      transition: all 0.75s;
-      margin-left: 0.5rem;
-      margin-right: 0.5rem;
-    }
-  }
-  
-  @mixin link-design-active {
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  transition: all 0.75s;
+
+  &:hover {
     text-decoration: none;
     border-bottom: 3px solid $success;
-    transition: all .5s;
+    transition: all 0.75s;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
-  
-  @mixin portrait-img-lg-screen {
-    @include media-breakpoint-up(lg) {
-      background-size: contain;
-      background-repeat: no-repeat;
-  }
-  }
+}
 
-  @mixin div-background-image {
-    box-shadow: $dropshadow;
-    height: 40vh;
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: center;
+@mixin link-design-active {
+  text-decoration: none;
+  border-bottom: 3px solid $success;
+  transition: all 0.5s;
+}
+
+@mixin portrait-img-lg-screen {
+  @include media-breakpoint-up(lg) {
+    background-size: contain;
+    background-repeat: no-repeat;
   }
+}
+
+@mixin div-background-image {
+  box-shadow: $dropshadow;
+  height: 40vh;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+

@@ -40,18 +40,21 @@ const Layout = ({ children }) => (
           </Container>
         </Container>
         <Container fluid className="footer-wrapper">
-          <FooterMain siteTitle={data.site.siteMetadata.title} tagline={data.site.siteMetadata.description} />
+          <FooterMain
+            siteTitle={data.site.siteMetadata.title}
+            tagline={data.site.siteMetadata.description}
+          />
         </Container>
         <Container fluid className="px-0">
           <Row noGutters>
             <Col className="footer-col">
               <footer>
                 <span>
-                <small>
-                  © {new Date().getFullYear()}, GLI Norcal Landscape
-                  Construction Inc., All Rights Reserved <br />
-                  Built with <FaHeart /> by
-                  {data.site.siteMetadata.author}
+                  <small>
+                    © {new Date().getFullYear()}, GLI Norcal Landscape
+                    Construction Inc., All Rights Reserved <br />
+                    Built with <FaHeart /> by
+                    {data.site.siteMetadata.author}
                   </small>
                 </span>
               </footer>

@@ -7,7 +7,7 @@ import Contactform from "../components/form"
 import phone from "../images/icons/phone.png"
 import map from "../images/icons/map.png"
 
-import { Container } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 
 const Contact = () => {
   return (
@@ -18,36 +18,32 @@ const Contact = () => {
           <div className="container d-flex justify-content-around align-content-center 100-h">
             <div className="contact-info card card-body mx-1">
               <h1 className="card-title text-white">Hi there!</h1>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Praesentium ratione atque assumenda repudiandae neque natus enim
-                necessitatibus itaque earum ex? Libero, veritatis dolores.
-                Doloribus quasi nam accusamus hic aliquam laudantium!
-              </p>
+              <p className="card-text">We would love to hear from you!</p>
               <Container className="pb-5">
                 <Contactform />
               </Container>
-              <div className="d-flex justify-content-between">
-                <div className="box">
-                  <div className="d-flex flex-row flex-nowrap align-items-end text-white">
-                    <img src={map} alt="map icon" />
-                    <h2>Our Offices</h2>
-                  </div>
-                  <p className="text-justify">
-                    125 Rich Street
-                    <br />
-                    Greenbrae, CA 94904
-                  </p>
-                </div>
-                <div className="box">
-                  <div className="d-flex flex-row flex-nowrap align-items-end text-white">
-                    <img src={phone} alt="map icon" />
-                    <h2>Call Us</h2>
-                  </div>
-                  <p>(415) 331-1709</p>
-                </div>
-                <div className="box" />
-              </div>
+              <Container>
+                <Row>
+                  <Col xs={12} lg={{ span: 3, offset: 3 }}>
+                    <div className="d-flex flex-row flex-nowrap align-items-end text-white">
+                      <img src={map} alt="map icon" />
+                      <h2>Our Offices</h2>
+                    </div>
+                    <p className="text-justify">
+                      125 Rich Street
+                      <br />
+                      Greenbrae, CA 94904
+                    </p>
+                  </Col>
+                  <Col xs={12} lg={3}>
+                    <div className="d-flex flex-row flex-nowrap align-items-end text-white">
+                      <img src={phone} alt="map icon" />
+                      <h2>Call Us</h2>
+                    </div>
+                    <p>(415) 331-1709</p>
+                  </Col>
+                </Row>
+              </Container>
             </div>
           </div>
         </div>

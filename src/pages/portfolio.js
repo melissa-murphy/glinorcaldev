@@ -35,12 +35,18 @@ const ImgCard = styled.div`
   background-position-y: ${props => props.yPosition};
   background-position-x: ${props => props.xPosition};
   background-image: url(${props => props.src});
+  transition: all 1s ease;
+  :hover {
+    background: rgba(0, 0, 0, 0.6);
+    transition: all 1s ease;
+  }
 `
 const PortfolioLink = props => (
   <div>
     <ImgCard
       src={props.src}
       alt={props.alt}
+      content={props.content}
       yPosition={props.yPosition}
       xPosition={props.xPosition}
     />
@@ -75,44 +81,45 @@ const Portfolio = () => (
         <Col xs={12} md={6} lg={4}>
           {" "}
           <Link to="/belvederelagoon">
-          <PortfolioLink
-            src={belvederelagoon}
-            yPosition="center"
-            xPosition="center"
-            alt="Belvedere Island Lagoon"
-          />
+            <PortfolioLink
+              src={belvederelagoon}
+              yPosition="center"
+              xPosition="center"
+              alt="Belvedere Island Lagoon"
+            />
           </Link>
         </Col>
         <Col xs={12} md={6} lg={4}>
           {" "}
           <Link to="/piedmont">
-          <PortfolioLink
-            src={piedmont}
-            yPosition="center"
-            xPosition="center"
-            alt="Grand Piedmont Estate"
-          /></Link>
+            <PortfolioLink
+              src={piedmont}
+              yPosition="center"
+              xPosition="center"
+              alt="Grand Piedmont Estate"
+            />
+          </Link>
         </Col>
         <Col xs={12} md={6} lg={4}>
           {" "}
           <Link to="/sanfrancisco">
-          <PortfolioLink
-            src={sanfrancisco}
-            yPosition="bottom"
-            xPosition="center"
-            alt="Petite San Francisco Back Yard"
-          />
+            <PortfolioLink
+              src={sanfrancisco}
+              yPosition="bottom"
+              xPosition="center"
+              alt="Petite San Francisco Back Yard"
+            />
           </Link>
         </Col>
         <Col xs={12} md={6} lg={4}>
           {" "}
           <Link to="/sanrafael">
-          <PortfolioLink
-            src={sanrafael}
-            yPosition="center"
-            xPosition="center"
-            alt="San Rafael Custom Stone"
-          />
+            <PortfolioLink
+              src={sanrafael}
+              yPosition="center"
+              xPosition="center"
+              alt="San Rafael Custom Stone"
+            />
           </Link>
         </Col>
       </Row>

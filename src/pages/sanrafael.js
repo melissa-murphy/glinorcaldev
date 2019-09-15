@@ -1,4 +1,5 @@
 import React from "react"
+import Media from "react-responsive"
 import { Container } from "react-bootstrap"
 import Slider from "react-slick"
 
@@ -6,9 +7,11 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import "react-image-gallery/styles/css/image-gallery.css"
-import image1 from "../images/glinorcal-stone-firepit.jpg"
-import image2 from "../images/glinorcal-stone-path-masonry-glass-privacy-walls.jpg"
-import image3 from "../images/glinorcal-stone-walls-patio-carpentry.jpg"
+import image1 from "../images/san-rafael/san-rafael-1.jpg"
+import image2L from "../images/san-rafael/san-rafael-2L.jpg"
+import image2P from "../images/san-rafael/san-rafael-2P.jpg"
+import image3P from "../images/san-rafael/san-rafael-3P.jpg"
+import image4L from "../images/san-rafael/san-rafael-4L.jpg"
 
 const SanRafael = () => {
   const settings = {
@@ -27,7 +30,10 @@ const SanRafael = () => {
             matches ? (
               <Slider {...settings}>
                 <div>
-                  <img className="img img-fluid" src={image1} alt="image1" />
+                  <img className="img img-fluid" src={image3P} alt="image1" />
+                </div>
+                <div>
+                  <img className="img img-fluid" src={image2P} alt="image3" />
                 </div>
               </Slider>
             ) : (
@@ -35,8 +41,14 @@ const SanRafael = () => {
                 <div>
                   <img
                     className="img img-fluid"
-                    src={image1}
-                    alt="image1"></img>
+                    src={image2L}
+                    alt="image2L"></img>
+                </div>
+                <div>
+                  <img
+                    className="img img-fluid"
+                    src={image4L}
+                    alt="image4L"></img>
                 </div>
               </Slider>
             )
