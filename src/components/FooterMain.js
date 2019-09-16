@@ -102,12 +102,12 @@ const FooterMain = ({ siteTitle, tagline }) => (
             <p className="text-right ">Browse the job openings.</p>
           </a>
 
-          <Col className="pt-5 pt-md-2 social-buttons text-right text-md-center ">
+          <Col className="pt-5 pt-md-2 social-buttons text-right  ">
             <p className="text-uppercase border-bottom border-dark pb-0 mb-0">
               follow gli norcal
             </p>
             <Row>
-              <Col xs={{ span: 1, offset: 8 }} md={{ span: 1, offset: 1 }}>
+              <Col xs={{ span: 1, offset: 6 }}>
                 <a
                   className="link-no-style"
                   rel="nofollow"

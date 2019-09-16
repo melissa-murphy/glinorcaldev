@@ -37,7 +37,7 @@ const IndexPage = () => {
                   <img className="img img-fluid" src={image2P} alt="image2P" />
                 </div>
                 <div>
-                  <img className="img img-fluid" src={image3P} alt="image3P" />{" "}
+                  <img className="img img-fluid" src={image3P} alt="image3P" />
                 </div>
               </Slider>
             ) : (
