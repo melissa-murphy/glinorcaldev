@@ -47,7 +47,7 @@ const IndexPage = () => {
             ) : (
               <Slider {...settings}>
                 <div>
-                  <img className="img img-fluid" src={image1L} alt={firepit} />
+                  <img className="img img-fluid" src={image1P} alt={firepit} />
                 </div>
                 <div>
                   <img className="img img-fluid" src={image2P} alt={belmarin} />
