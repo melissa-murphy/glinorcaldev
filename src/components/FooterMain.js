@@ -168,7 +168,8 @@ const FooterMain = ({ siteTitle, tagline }) => (
               <a
                 className="link-no-style"
                 href="https://www.google.com/maps/place/GLI+Norcal+Landscape+Construction/@37.939707,-122.514235,15z/data=!4m5!3m4!1s0x0:0x8c67891c5a08c38c!8m2!3d37.939707!4d-122.514235"
-                target="_blank">
+                target="_blank"
+                rel="noopener noreferrer">
                 125 Rich Street <br />
                 Greenbrae, CA 94904
               </a>
@@ -180,8 +181,9 @@ const FooterMain = ({ siteTitle, tagline }) => (
               <a
                 className="link-no-style"
                 href="https://www2.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=668200"
-                target="_blank">
-                CSLB Licensed Landscape <br />
+                target="_blank"
+                rel="noopener noreferrer">
+                > CSLB Licensed Landscape <br />
                 Contractor #668200
               </a>
             </Col>
