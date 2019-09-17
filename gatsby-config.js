@@ -4,6 +4,7 @@ module.exports = {
     title: `GLI Norcal Landscape Construction`,
     description: `Purveyors of Fine Crafted Landscapes in Marin and the SF Bay Area.`,
     author: `thoughtfulMonkey`,
+    siteUrl: `https://glinorcal.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -39,6 +40,37 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        // exclude: ["/category/*", `/path/to/page`],
+        query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+
+          allSitePage {
+            edges {
+              node {
+                path
+              }
+            }
+          }
+      }`,
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.edges.map(edge => {
+            return {
+              url: site.siteMetadata.siteUrl + edge.node.path,
+              changefreq: `daily`,
+              priority: 0.7,
+            }
+          }),
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

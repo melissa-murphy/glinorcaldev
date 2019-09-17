@@ -1,5 +1,5 @@
 import React from "react"
-import Media from "react-responsive"
+import MediaQuery from "react-responsive"
 import { Container } from "react-bootstrap"
 import Slider from "react-slick"
 
@@ -24,41 +24,38 @@ const IndexPage = () => {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
   }
   return (
     <Layout pageInfo={{ pageName: "index" }}>
       <SEO title="Home" keywords={[`glinorcal`, `landscape`, `construction`]} />
       <Container fluid className="carousel-wrapper mx-0 px-0">
-        <Media query="(min-width: 768px)">
-          {matches =>
-            matches ? (
-              <Slider {...settings}>
-                <div>
-                  <img className="img img-fluid" src={image1L} alt={firepit} />
-                </div>
-                <div>
-                  <img className="img img-fluid" src={image2L} alt={belmarin} />
-                </div>
-                <div>
-                  <img className="img img-fluid" src={image3L} alt={piedmont} />
-                </div>
-              </Slider>
-            ) : (
-              <Slider {...settings}>
-                <div>
-                  <img className="img img-fluid" src={image1P} alt={firepit} />
-                </div>
-                <div>
-                  <img className="img img-fluid" src={image2P} alt={belmarin} />
-                </div>
-                <div>
-                  <img className="img img-fluid" src={image3P} alt={piedmont} />
-                </div>
-              </Slider>
-            )
-          }
-        </Media>
+        <MediaQuery minDeviceWidth={1024}>
+          <Slider {...settings}>
+            <div>
+              <img className="img img-fluid" src={image1L} alt={firepit} />
+            </div>
+            <div>
+              <img className="img img-fluid" src={image2L} alt={belmarin} />
+            </div>
+            <div>
+              <img className="img img-fluid" src={image3L} alt={piedmont} />
+            </div>
+          </Slider>
+        </MediaQuery>
+        <MediaQuery maxDeviceWidth={1023}>
+          <Slider {...settings}>
+            <div>
+              <img className="img img-fluid" src={image1P} alt={firepit} />
+            </div>
+            <div>
+              <img className="img img-fluid" src={image2P} alt={belmarin} />
+            </div>
+            <div>
+              <img className="img img-fluid" src={image3P} alt={piedmont} />
+            </div>
+          </Slider>
+        </MediaQuery>
       </Container>
     </Layout>
   )

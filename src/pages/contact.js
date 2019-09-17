@@ -18,7 +18,10 @@ const Contact = () => {
           <div className="container d-flex justify-content-around align-content-center 100-h">
             <div className="contact-info card card-body mx-1">
               <h1 className="card-title text-white">Hi there!</h1>
-              <p className="card-text">We would love to hear from you!</p>
+              <p className="card-text">
+                We are happy to provide an estimate and answer any questions you
+                may have about our services. Contact us today!
+              </p>
               <Container className="pb-5">
                 <Contactform />
               </Container>

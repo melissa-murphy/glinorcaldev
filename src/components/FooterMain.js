@@ -54,7 +54,7 @@ const FooterMain = ({ siteTitle, tagline }) => (
             <Nav.Link className="footer-nav" href="/legal">
               Legal
             </Nav.Link>
-            <Nav.Link className="footer-nav" href="/sitemap">
+            <Nav.Link className="footer-nav" href="/sitemap.xml">
               Sitemap
             </Nav.Link>
           </Nav>
