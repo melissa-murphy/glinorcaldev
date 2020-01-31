@@ -1,12 +1,10 @@
 // import PropTypes from "prop-types"
 import React from "react"
+import { Link } from "gatsby"
 import instagramIcon from "../images/icons/instagram.png"
 import linkedInIcon from "../images/icons/linkedin.png"
 import twitterIcon from "../images/icons/twitter.png"
 import phone from "../images/icons/phone.png"
-import message from "../images/icons/message.png"
-import map from "../images/icons/map.png"
-import checkicon from "../images/icons/checkmark.png"
 
 import {
   Container,
@@ -16,6 +14,7 @@ import {
   Form,
   FormGroup,
   Button,
+  ButtonGroup,
   Image,
 } from "react-bootstrap"
 
@@ -23,13 +22,27 @@ const FooterMain = ({ siteTitle, tagline }) => (
   <div>
     <Container>
       <Row>
-        <Col lg={6}>
-          <p className="h1 mb-2 pt-5 pb-2 text-light">{siteTitle}</p>
-          <p className="">{tagline}</p>
+        <Col lg={6} className="mb-4">
+          <p className="h1 mb-1 pt-5 pb-2 text-light text-nowrap">
+            {siteTitle}
+          </p>
+          <p className="tagline">{tagline}</p>
+          <a
+            className="footer-info-links license"
+            href="https://www2.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=668200"
+            target="_blank"
+            rel="noopener noreferrer">
+            California Licensed Landscape Contractor #668200
+          </a>{" "}
+          <br />
+          <Button variant="warning" className="mt-3" href="tel:415-331-1709">
+            <Image src={phone} alt="call" className="icon" />
+            Call Us (415) 331-1709
+          </Button>
         </Col>
       </Row>
       <Row>
-        <Col xs={6} md={3}>
+        <Col xs={12} md={4}>
           <Nav defaultActiveKey="/home" className="flex-column">
             <h6 className="text-uppercase border-bottom border-dark">
               Information
@@ -37,61 +50,20 @@ const FooterMain = ({ siteTitle, tagline }) => (
             <Nav.Link className="footer-nav" href="/portfolio">
               Projects
             </Nav.Link>
-            <Nav.Link className="footer-nav" href="/faqs">
+            {/* <Nav.Link className="footer-nav" href="/faqs">
               FAQs
-            </Nav.Link>
+            </Nav.Link> */}
             <Nav.Link className="footer-nav" href="/about">
               About
             </Nav.Link>
-          </Nav>
-        </Col>
-        <Col xs={6} md={3}>
-          <Nav defaultActiveKey="/home" className="flex-column">
-            <h6 className="text-uppercase border-bottom border-dark">About</h6>
             <Nav.Link className="footer-nav" href="/contact">
               Contact
             </Nav.Link>
-            <Nav.Link className="footer-nav" href="/legal">
-              Legal
-            </Nav.Link>
-            <Nav.Link className="footer-nav" href="/sitemap.xml">
-              Sitemap
-            </Nav.Link>
           </Nav>
         </Col>
-        <Col sm={12} md={3}>
-          <h6 className="text-uppercase border-bottom border-dark">
-            Stay Posted
-          </h6>
-          <p id="subscribe" className="text-light font-weight-light">
-            Get insight on the landscape industry and helpful tips to get the
-            most out of your construction project.
-          </p>
-          <Form>
-            <FormGroup>
-              <Form.Control
-                type="text"
-                className="form-control
-                        text-dark"
-                title="GLI norcal newsletter"
-                placeholder="enter your email"
-              />
-            </FormGroup>
-            <FormGroup>
-              <Button
-                variant="success"
-                className="text-uppercase
-                        small"
-                data-toggle="modal"
-                data-target="#alertModal"
-                type="button">
-                No spam, we promise!
-              </Button>
-            </FormGroup>
-          </Form>
-        </Col>
-        <Col xs={12} md={3}>
-          <h6 className="default-pointer text-uppercase border-bottom border-dark text-right">
+
+        <Col xs={12} md={{ span: 3, offset: 2 }}>
+          <h6 className="default-pointer text-uppercase border-bottom border-dark">
             Careers at GLI
           </h6>
           <a
@@ -99,15 +71,15 @@ const FooterMain = ({ siteTitle, tagline }) => (
             href="https://www.indeed.com/cmp/Gli-Norcal-Landscape-Construction/jobs"
             target="_blank"
             rel="noreferrer noopener">
-            <p className="text-right ">Browse the job openings.</p>
+            <p className="pl-2">Browse the job openings.</p>
           </a>
 
-          <Col className="pt-5 pt-md-2 social-buttons text-right  ">
+          <Col className="pt-5 pt-md-2 social-buttons ">
             <p className="text-uppercase border-bottom border-dark pb-0 mb-0">
               follow gli norcal
             </p>
             <Row>
-              <Col xs={{ span: 1, offset: 6 }}>
+              <Col xs={{ span: 1 }}>
                 <a
                   className="link-no-style"
                   rel="nofollow"
@@ -139,67 +111,55 @@ const FooterMain = ({ siteTitle, tagline }) => (
             </Row>
           </Col>
         </Col>
+        <Col sm={12} md={3}>
+          <h6 className="text-uppercase border-bottom border-dark">
+            Stay Posted
+          </h6>
+          <p id="subscribe" className="text-light font-weight-light">
+            Get insight on the landscape industry and helpful tips to get the
+            most out of your construction project.
+          </p>
+          <Form>
+            <FormGroup>
+              <Form.Control
+                type="text"
+                className="form-control
+                        text-dark"
+                title="GLI norcal newsletter"
+                placeholder="enter your email"
+              />
+            </FormGroup>
+            <FormGroup>
+              <Button
+                variant="success"
+                className="small"
+                data-toggle="modal"
+                data-target="#alertModal"
+                type="button">
+                No spam, we promise!
+              </Button>
+            </FormGroup>
+          </Form>
+        </Col>
       </Row>
-      <Container className="footer-info-links">
-        <Row>
-          <Col md={{ span: 4, offset: 2 }}>
-            <div>
-              <Image src={message} alt="message" className="icon" />
-              <Col>
-                <Nav.Link
-                  className="btn-link pt-0 link-no-style"
-                  href="/contact">
-                  hello@glinorcal.com
-                </Nav.Link>
-              </Col>
-            </div>
-          </Col>
-          <Col xs={12} md={4}>
-            <Image src={phone} alt="call" className="icon" />
-            <Col>
-              <p className="link-no-style">415.331.1709</p>
-            </Col>
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={12} md={{ span: 4 }}>
-            <Image src={map} alt="address" className="icon" />
-            <Col>
-              <a
-                className="link-no-style"
-                href="https://www.google.com/maps/place/GLI+Norcal+Landscape+Construction/@37.939707,-122.514235,15z/data=!4m5!3m4!1s0x0:0x8c67891c5a08c38c!8m2!3d37.939707!4d-122.514235"
-                target="_blank"
-                rel="noopener noreferrer">
-                125 Rich Street <br />
-                Greenbrae, CA 94904
-              </a>
-            </Col>
-          </Col>
-          <Col xs={12} md={{ span: 4, offset: 4 }}>
-            <Image src={checkicon} alt="checkmark" className="icon" />
-            <Col>
-              <a
-                className="link-no-style"
-                href="https://www2.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=668200"
-                target="_blank"
-                rel="noopener noreferrer">
-                > CSLB Licensed Landscape <br />
-                Contractor #668200
-              </a>
-            </Col>
-          </Col>
-        </Row>
-      </Container>
+      <Row className="pt-5">
+        <Col>
+          <small className="text-nowrap footer-info-links">
+            © {new Date().getFullYear()}, GLI Norcal Landscape Construction Inc
+          </small>
+        </Col>
+        <Col xs={1}>
+          <Link href="/sitemap.xml">
+            <small className="footer-info-links">Sitemap</small>
+          </Link>
+        </Col>
+        <Col xs={1}>
+          <Link href="/legal">
+            <small className="footer-info-links">Legal</small>
+          </Link>
+        </Col>
+      </Row>
     </Container>
   </div>
 )
-
-// FooterMain.propTypes = {
-//   siteTitle: PropTypes.string,
-// }
-
-// FooterMain.defaultProps = {
-//   siteTitle: ``,
-// }
-
 export default FooterMain
