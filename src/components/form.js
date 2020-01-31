@@ -19,6 +19,7 @@ const Contactform = () => {
       emailjs.send(service_id, template_id, params, user_id).then(
         res => {
           console.log(`Success`, res.status, res.text)
+
         },
         err => {
           console.log(`Failed`, err)
@@ -31,6 +32,7 @@ const Contactform = () => {
     alert(
       `Thank you for your message ${inputs.name}! We'll get back to you soon!`
     )
+
   }
   const { inputs, handleInputChange, handleSubmit } = useInput(
     {
@@ -82,7 +84,7 @@ const Contactform = () => {
           onChange={handleInputChange}
           placeholder="How can we help you?"></Form.Control>
       </Form.Group>
-      <Button variant="success" size="lg" type="submit">
+      <Button variant="success" size="lg" type="submit" onSubmit={handleSubmit}>
         Send a message
       </Button>
     </Form>
